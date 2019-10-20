@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Processo Seletivo Mercadou</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+
+<body id="top">
+    <section id="banner" data-image="../images/banner">
+        <div class="inner">
+
+            <a href="#main" class="more">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <h2>RESPOSTA</h2>
+
+            <h3>
+                É assíncrona !
+                Quando uma função assíncrona é chamada, ela retorna uma Promise. 
+                Quando a função assíncrona retorna um valor, a Promise será resolvida com o valor retornado. 
+                Quando a função assíncrona lança uma exceção ou algum valor, a Promise será rejeitada com o valor lançado.
+                Uma função assíncrona pode conter uma expressão await, que pausa a execução da função assíncrona e espera pela resolução 
+                da Promise passada, e depois retoma a execução da função assíncrona e retorna o valor resolvido.
+                Uma API que retorna uma Promise vai resultar em uma cadeia de Promises e separa a função em várias partes
+            </h3>
+
+            <h2>SOLUÇÃO</h2>
+
+            <pre class="brush: js">
+												
+							
+                <p>
+                    <h3>Primeiro exemplo</h3>
+
+                    setTimeout(() => saySomething("10 segundos"), 10000);
+
+                    const p = Promise.resolve(21);
+                    
+                    const p1 = new Promise((resolve, reject) => { 
+                        setTimeout(() => {
+                            p.then(value => console.log(value));
+                        }, 1000);
+                    });
+                    
+                    p1.then(values => { 
+                        console.log(values);
+                    });
+                    
+                    <h3>Segundo exemplo</h3>
+                    async function getValues() {
+                        return [1,2,3,4];
+                        }
+                         
+                        async function asyncOperation(value) {
+                            return value + 1;
+                        }
+                    
+                    async function foo() {
+                        try {
+                            var message = await promisingOperation();
+                            console.log(message);
+                        } catch (e) {
+                            console.log('Nós falhamos:', e);
+                        }
+                    }
+
+                    <h3>Desafio !</h3>
+                    <p> 
+                        Você pode usar "Promise.all" em todos os arrays internos e, em seguida, no array externo, 
+                        para obter um promise para o array de promises:
+                    </p>
+                    var arrayOfPromises = [
+   
+                        [promise_1, promise_2],
+                        [promise_3,promise_4],
+                        [promise_5,promise_6]
+
+                    ].reduce(function (arr, item) {
+                        
+                        item.forEach(function (promise) {
+                        arr.push(promise);
+                        });
+                        
+                        return arr;
+                    }, []);
+
+                    Promise.all(promisesArray).then(function () {
+                        // Código Aqui
+                    });
+
+    
+                </p>							
+
+            </pre>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script type="text/javascript" src="../perguntas/pergunta_1.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../assets/js/skel.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

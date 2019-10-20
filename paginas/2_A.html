@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Processo Seletivo Mercadou</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+
+<body id="top">
+    <section id="banner" data-image="../images/banner">
+        <div class="inner">
+
+            <a href="#main" class="more">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <h2>RESPOSTA</h2>
+
+            <p>
+                <h3>
+                    O JavaScript sempre vai comparar as referências internas relacionadas, quando se deparar com uma igualdade,
+                    nas linhas de codigo os valores são os mesmos {name: 'amy'} = {Name: 'amy'} 
+                    mas na memória eles são diferentes, por isso deve-se usar " Equal value and equal type " " === ".
+                </h3>
+
+            </p>
+
+            <h2>SOLUÇÃO</h2>
+
+            <pre class="brush: js">
+																		
+                <h3>
+                    greet = (person) => {
+                        if (person.name === 'amy') {
+                            return 'hey amy'
+                        }
+                        else{
+                            return 'hey arnold'
+                        }
+                    }
+                    greet({ name: 'amy' }) 
+    
+                </h3>							
+
+            </pre>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script type="text/javascript" src="../perguntas/pergunta_1.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../assets/js/skel.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
